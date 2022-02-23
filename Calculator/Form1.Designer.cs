@@ -481,7 +481,6 @@
             this.Numberbox.Size = new System.Drawing.Size(323, 49);
             this.Numberbox.TabIndex = 41;
             this.Numberbox.Text = "0";
-            this.Numberbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // groupBox1
             // 
@@ -499,9 +498,8 @@
             this.groupBox1.Size = new System.Drawing.Size(257, 86);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Trigbox";
             this.groupBox1.Visible = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
             // Cot
             // 

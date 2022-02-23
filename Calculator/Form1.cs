@@ -28,18 +28,6 @@ namespace Calculator
         }
 
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void groupBox1_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Trigonometry_Click(object sender, EventArgs e)
         {
             if (groupBox1.Visible == true)
@@ -61,21 +49,21 @@ namespace Calculator
 
         private void Number_click(object sender, EventArgs e)
         {
-            if (Numberbox.Text == "0"  || (valueEntered))
-            {
+            if (Numberbox.Text == "0" || (valueEntered))
+            
                 Numberbox.Text = " ";
-                valueEntered = false;
+            valueEntered = false;
 
-                Button num = (Button)sender;
+            Button num = (Button)sender;
 
-                if (num.Text == ".")
-                {
+            if (num.Text == ".")
+            {
                     if (!Numberbox.Text.Contains("."))
                         Numberbox.Text = Numberbox + num.Text;
-                }
-                else
-                    Numberbox.Text = Numberbox.Text + num.Text;
             }
+            else
+                    Numberbox.Text = Numberbox.Text + num.Text;
+            
         }
     }
 }
