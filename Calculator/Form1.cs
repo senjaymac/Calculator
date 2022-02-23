@@ -44,7 +44,14 @@ namespace Calculator
 
         private void Backspace_Click(object sender, EventArgs e)
         {
-            Numberbox.Text = Numberbox.Text.Substring(0, Numberbox.Text.Length - 1); 
+            if (Numberbox.Text.Length > 0)
+            {
+                Numberbox.Text = Numberbox.Text.Remove(Numberbox.Text.Length - 1, 1);
+            }
+            if(Numberbox.Text == " ")
+            {
+                Numberbox.Text = "0";
+            }
         }
 
         private void Number_click(object sender, EventArgs e)
@@ -59,11 +66,17 @@ namespace Calculator
             if (num.Text == ".")
             {
                     if (!Numberbox.Text.Contains("."))
-                        Numberbox.Text = Numberbox + num.Text;
+                        Numberbox.Text = Numberbox.Text + num.Text;
             }
             else
                     Numberbox.Text = Numberbox.Text + num.Text;
             
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            Numberbox.Clear();
+            Emptylabel.Text = " ";
         }
     }
 }

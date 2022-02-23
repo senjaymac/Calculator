@@ -78,6 +78,7 @@
             this.Cos = new System.Windows.Forms.Button();
             this.Sin = new System.Windows.Forms.Button();
             this.second = new System.Windows.Forms.Button();
+            this.Emptylabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -408,8 +409,9 @@
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(60, 40);
             this.Clear.TabIndex = 33;
-            this.Clear.Text = "CE";
+            this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Backspace
             // 
@@ -573,12 +575,23 @@
             this.second.Text = "2nd";
             this.second.UseVisualStyleBackColor = true;
             // 
+            // Emptylabel
+            // 
+            this.Emptylabel.AutoSize = true;
+            this.Emptylabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Emptylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Emptylabel.Location = new System.Drawing.Point(42, 50);
+            this.Emptylabel.Name = "Emptylabel";
+            this.Emptylabel.Size = new System.Drawing.Size(0, 16);
+            this.Emptylabel.TabIndex = 43;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(625, 504);
+            this.Controls.Add(this.Emptylabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Numberbox);
             this.Controls.Add(this.FE);
@@ -683,6 +696,7 @@
         private System.Windows.Forms.Button Cos;
         private System.Windows.Forms.Button Sin;
         private System.Windows.Forms.Button second;
+        private System.Windows.Forms.Label Emptylabel;
     }
 }
 
